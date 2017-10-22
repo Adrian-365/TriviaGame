@@ -1,0 +1,30 @@
+body {
+	background-image: url(../images/Old_School.jpg);
+	text-align: center; 
+	color: white;
+
+}
+
+#game {
+
+	margin-top: 10px;
+	background-image: url(../images/concrete.jpg);
+	min-height: 600px;
+}
+
+h1 {
+	font-family: verdana;
+	font-size: 75px;
+}
+
+#timer {
+	min-height: 40px;
+}
+
+#question {
+	min-height: 40px;
+}
+
+#answers {
+	min-height: 40px;
+}
