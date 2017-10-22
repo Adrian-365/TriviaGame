@@ -19,19 +19,35 @@ var trivaGame = {
 	start: function() {
 		var started = $(this).attr('data-started');
         console.log(started);
+
 		if (started === 'false') {
+			$(this).attr('data-started', 'true');
+			trivaGame.nextQ();
+		} else { 
+			alert('click elsewhere')
+		}
+	},
+
+	nextQ: function() {
+
 		trivaGame.time = 10;
-		$(this).attr('data-started', 'true');
+		counter = setInterval(trivaGame.count, 1000);
+		
 		$('#timer').html('Time Remaining:  '+trivaGame.time);
 		$('#question').html('question will go here')
 		$('#answers').html('answers will go here')
-		} else { 
-			alert('click elsewhere')}
 	},
 
 	check: function() {},
 
 	reset: function() {},
+
+	count: function() {
+		trivaGame.time--;
+		$('#timer').html('Time Remaining:  '+trivaGame.time);
+		
+
+	},
 
 
 }
